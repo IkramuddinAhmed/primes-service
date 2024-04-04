@@ -1,22 +1,26 @@
-package edu.se.primesservice.controller;
+package edu.iu.saikotha.primeservice.controller;
 
-
-import ch.qos.logback.classic.spi.ConfiguratorRank;
-import edu.se.primesservice.service.IPrimesService;
+import edu.iu.saikotha.primeservice.service.IPrimesService;
+import edu.iu.saikotha.primeservice.service.PrimesService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
 @RequestMapping("/primes")
+
 public class PrimesController {
 
-    IPrimesService iPrimesService;
+    IPrimesService primesService;
 
-    public PrimesController(IPrimesService iPrimesService){
-        this.iPrimesService = iPrimesService;
+    public PrimesController(IPrimesService primesService)
+    {
+        this.primesService = primesService;
     }
+
     @GetMapping("/{n}")
-    public boolean isPrime(@PathVariable int n){
-        return iPrimesService.isPrime(n);
+    public boolean isPrimeNumber(@PathVariable int n){
+        return primesService.isPrime(n);
     }
+
+
 }
