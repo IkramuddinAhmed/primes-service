@@ -10,8 +10,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   sql:
-    inti:
+    init:
       mode: always
-
 server:
   port: 8085

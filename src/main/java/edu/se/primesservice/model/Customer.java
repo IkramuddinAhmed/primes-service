@@ -1,47 +1,41 @@
-package edu.iu.saikotha.primeservice.model;
+package edu.se.primesservice.model;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.security.config.Customizer;
 
 @Table
 @Entity
-
-
 public class Customer {
+
     @Id
     private String username;
-
     private String password;
 
-    public Customer(){
-
-    }
-
-    //class
-    public Customer(String username, String password){
+    public Customer(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public Customer() {
 
     }
 
-    public String getUsername(){
+    public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         this.username = username;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password){
+    public void setPassword(String password) {
         this.password = password;
     }
-
-
 }

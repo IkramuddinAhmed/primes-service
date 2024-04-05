@@ -1,15 +1,19 @@
-package edu.iu.saikotha.primeservice.security;
+package edu.se.primesservice.security;
 
 import com.nimbusds.jose.jwk.RSAKey;
 
 import java.security.KeyPair;
+//import java.security.interfaces.RSAKey;
+//import java.security.interfaces.RSAPrivateKey;
+//import java.security.interfaces.RSAPublicKey;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.util.UUID;
 
 public class Jwks {
-    private Jwks() {}
-    public static RSAKey generateRsa() {
+    private Jwks(){}
+
+    public static RSAKey generateRsa(){
         KeyPair keyPair = KeyGeneratorUtils.generateRsaKey();
         RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
         RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
@@ -19,4 +23,3 @@ public class Jwks {
                 .build();
     }
 }
-

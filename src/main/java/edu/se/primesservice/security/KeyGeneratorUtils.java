@@ -1,20 +1,16 @@
-
-package edu.iu.saikotha.primeservice.security;
-
-import com.nimbusds.jose.jwk.RSAKey;
-import org.springframework.stereotype.Component;
+package edu.se.primesservice.security;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
-import java.security.Security;
 
-@Component
 public class KeyGeneratorUtils {
 
-    private KeyGeneratorUtils() {}
-    static KeyPair generateRsaKey() {
+    private KeyGeneratorUtils(){
+    }
+
+    static KeyPair generateRsaKey(){
         KeyPair keyPair;
-        try {
+        try{
             KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
             keyPairGenerator.initialize(2048);
             keyPair = keyPairGenerator.generateKeyPair();

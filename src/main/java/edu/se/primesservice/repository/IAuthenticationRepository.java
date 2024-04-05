@@ -1,12 +1,13 @@
-package edu.iu.saikotha.primeservice.repository;
+package edu.se.primesservice.repository;
 
-import edu.iu.saikotha.primeservice.model.Customer;
+import edu.se.primesservice.model.Customer;
 
 import java.io.IOException;
 
 public interface IAuthenticationRepository {
 
     boolean save(Customer customer) throws IOException;
-
     Customer findByUsername(String username) throws IOException;
+
+
 }

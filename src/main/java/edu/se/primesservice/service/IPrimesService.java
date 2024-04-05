@@ -1,4 +1,4 @@
-package edu.iu.saikotha.primeservice.service;
+package edu.se.primesservice.service;
 
 public interface IPrimesService {
 
